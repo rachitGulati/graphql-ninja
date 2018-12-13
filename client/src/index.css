@@ -1,0 +1,18 @@
+body {
+  background: grey;
+  color: white;
+  padding: 50px;
+  margin: 0 25%;
+}
+h1{
+  text-align: center;
+  font-size: 5em;
+}
+ul{
+  margin: 0 auto;
+}
+li{
+  font-size: 2em;
+  padding: 10px;
+  list-style-type: none;
+}
