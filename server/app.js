@@ -2,9 +2,12 @@ const schema = require('./schema/schema');
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const PORT = 4000;
 const app = express();
+
+app.use(cors());
 
 mongoose.connect("mongodb://root:root1234@ds131784.mlab.com:31784/graphql-ninja");
 mongoose.connection.once('open', ()=>{
