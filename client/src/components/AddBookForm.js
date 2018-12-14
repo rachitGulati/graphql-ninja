@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mutation } from 'react-apollo';
-import { addBookQuery } from '../queries/query';
+import { addBookQuery, getBooksQuery } from '../queries/query';
 
 const displayAuthors = (props) => {
     const { loading, data} = props;
@@ -15,7 +15,10 @@ const displayAuthors = (props) => {
 }
 const submitBook = ({name, genre, authorId}, addBook) => {
 console.log(name, genre, authorId);
-addBook( { variables: { name, genre, authorId}});
+addBook(
+    { variables: { name, genre, authorId},
+    refetchQueries: [{ query: getBooksQuery}]
+    });
 }
 const AddBookForm = (props) => {
     const [name, setName] = useState('');
