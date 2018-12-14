@@ -3,16 +3,17 @@ body {
   color: white;
   padding: 50px;
   margin: 0 25%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
 }
 h1{
   text-align: center;
-  font-size: 5em;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 ul{
   margin: 0 auto;
 }
 li{
-  font-size: 2em;
   padding: 10px;
-  list-style-type: none;
 }

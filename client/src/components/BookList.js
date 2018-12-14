@@ -1,21 +1,8 @@
-import React, { Component } from 'react';
-import {gql} from 'apollo-boost';
+import React from 'react';
 import { Query } from 'react-apollo';
+import { getBooksQuery } from '../queries/query';
 
-const getBooksQuery = gql`
-    {
-        books{
-            name
-            id
-            author{
-                name
-            }
-
-        }
-    }
-`;
-class BookList extends Component {
-  render() {
+const BookList = () => {
     return (
       <div className="main">
       <Query query={getBooksQuery}>
@@ -35,7 +22,6 @@ class BookList extends Component {
       </Query>
       </div>       
     );
-  }
-}
+};
 
 export default BookList;
