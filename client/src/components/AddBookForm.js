@@ -47,7 +47,7 @@ const AddBookForm = (props) => {
                         { displayAuthors(props) }
                     </select>
                 </div>
-                <button> [+] </button>
+                <button>+</button>
             </form>
         )}
     </Mutation>
