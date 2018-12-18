@@ -29,7 +29,7 @@ app.use('/graphql', graphqlHTTP({
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.json({ 'path': path.join(__dirname, '../client/build/index.html')});
+    res.json({ 'path': path.join(__dirname, 'client/build/index.html')});
 });
 
 router.get('/home', (req, res) => {
