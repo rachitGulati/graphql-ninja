@@ -3,7 +3,7 @@
 ## Server:
 1) cd server
 2) mv .env.default .env
-3) Replace the MLAB_USER and MLAB_PASS with your mlab username and password
+3) Replace the MLAB_USER and MLAB_PASS with your [mlab](https://mlab.com/home) username and password
 4) npm run start
 
 
