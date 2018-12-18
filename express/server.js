@@ -24,12 +24,12 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '..','client/build')));
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+    res.sendFile(path.join(__dirname, '..', 'client/build/index.html'));
 });
 
 router.get('/home', (req, res) => {
