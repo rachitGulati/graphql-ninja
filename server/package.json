@@ -1,10 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "functions/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index-local.js",
+    "build": "netlify-lambda build .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +17,10 @@
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "lodash": "^4.17.11",
-    "mongoose": "^5.3.16"
-  }
+    "mongoose": "^5.3.16",
+    "netlify-lambda": "^1.1.1",
+    "serverless-http": "^1.8.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }
