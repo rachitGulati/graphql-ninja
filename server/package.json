@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "functions/index.js",
+  "main": "functions/server.js",
   "scripts": {
     "start": "node index-local.js",
     "build": "netlify-lambda build express",
