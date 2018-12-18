@@ -4,7 +4,7 @@
   "main": "functions/index.js",
   "scripts": {
     "start": "node index-local.js",
-    "build": "netlify-lambda build .",
+    "build": "netlify-lambda build express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
