@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "alias": "graphql-ninja",
+    "builds": [
+      { "src": "index.js", "use": "@now/node" },
+      { "src": "client/package.json", "use": "@now/static-build"}
+    ],
+    "routes": [
+        {"src": "^/static/(.*)", "dest": "/client/static/$1"},
+        {"src": "^/favicon.ico", "dest": "/client/favicon.ico"},
+        {"src": "^/asset-manifest.json", "dest": "/client/asset-manifest.json"},
+        {"src": "^/manifest.json", "dest": "/client/manifest.json"},
+        {"src": "^/service-worker.js", "headers": {"cache-control": "s-maxage=0"}, "dest": "/client/service-worker.js"},
+        {"src": "^/precache-manifest.(.*)", "dest": "/client/precache-manifest.$1"},
+        { "src": "/graphql", "dest": "index.js" },        
+        {"src": "^/(.*)", "dest": "/client/index.html"}
+    ],
+    "env": {
+        "DB_USER": "@db-user",
+        "DB_PASS": "@db-pass"
+      }
+  }  
