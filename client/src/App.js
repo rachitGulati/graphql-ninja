@@ -8,7 +8,7 @@ import AddBook from './components/AddBook';
 
 // Apollo Client SetUp
 const client = new ApolloClient({
-  uri: '/graphql'
+  uri: '/.netlify/functions/server/graphql'
 });
 
 class App extends Component {
