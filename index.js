@@ -1,2 +1,2 @@
-require('./index-local');
+const app = require('./index-local');
 export default app;

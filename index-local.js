@@ -25,3 +25,5 @@ app.use('/graphql', graphqlHTTP({
 app.listen(PORT, ()=>{
     console.log('Server is listing at ' + PORT);
 })
+
+module.exports = app;
