@@ -17,6 +17,7 @@ const BookList = () => {
                         { data.books.map( book => {
                             return <li 
                             key={book.id}
+                            className={(currentBook === book.id ? 'active': '')}
                             onClick={ () => { setCurrentBook(book.id)}}
                             > 
                                 {book.name}

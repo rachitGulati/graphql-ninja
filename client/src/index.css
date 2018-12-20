@@ -20,10 +20,15 @@ body {
   margin: 12px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #880E4F;
+  border: 1px solid #879f48;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-  color: #880E4F;
+  color: #879f48;
   cursor: pointer
+}
+
+#book-list li.active{
+  border: 1px solid rgb(173, 20, 87);
+  color: rgb(173, 20, 87);
 }
 form{
   background: #fff;
@@ -56,7 +61,7 @@ form select form.input{
 form button{
   color: #fff;
   font-size: 2em;
-  background: #AD1457;
+  background: #b7d667;
   border: 0;
   padding: 0 10px;
   border-radius: 50%;
@@ -71,7 +76,7 @@ form button{
   right: 0;
   height: 100%;
   width: 40%;
-  background: #AD1457;
+  background: #b7d667;
   padding:30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
