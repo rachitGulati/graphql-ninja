@@ -13,10 +13,9 @@ const displayAuthors = (props) => {
     }
 
 }
-const submitBook = ({name, genre, authorId}, addBook) => {
-console.log(name, genre, authorId);
+const submitBook = ({name, genre, authorId, url, year}, addBook) => {
 addBook(
-    { variables: { name, genre, authorId},
+    { variables: { name, genre, authorId, url, year},
     refetchQueries: [{ query: getBooksQuery}]
     });
 }
@@ -24,12 +23,14 @@ const AddBookForm = (props) => {
     const [name, setName] = useState('');
     const [genre, setGenre] = useState('');
     const [authorId, setAuthorId] = useState('');
+    const [url, setUrl] = useState('');
+    const [year, setYear] = useState('');
     return (
         <Mutation mutation={addBookQuery}>
         {(addBook, { data }) => (
             <form id="add-book" onSubmit={ (event) => {
                 event.preventDefault();
-                submitBook({name, genre, authorId}, addBook);
+                submitBook({name, genre, authorId, url, year}, addBook);
                 event.target.reset();
                 }}>
                 <div className="field">
@@ -39,6 +40,14 @@ const AddBookForm = (props) => {
                 <div className="field">
                     <label> Genre: </label>
                     <input type="text" onChange={ (e) => { setGenre(e.target.value)}}/>
+                </div>
+                <div className="field">
+                    <label> Image URL: </label>
+                    <input type="text" onChange={ (e) => { setUrl(e.target.value)}}/>
+                </div>
+                <div className="field">
+                    <label> Year: </label>
+                    <input type="text" onChange={ (e) => { setYear(e.target.value)}}/>
                 </div>
                 <div className="field">
                     <label> Author: </label>

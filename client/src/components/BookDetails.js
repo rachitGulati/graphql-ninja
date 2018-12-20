@@ -16,7 +16,9 @@ const BookDetails = (props) => {
                     return (
                             <div>
                                 <h2>{ book.name} </h2>
+                                {book.url && <img src={book.url} alt="Book"/> }
                                 <p>{book.genre}</p>
+                                {book.year && <p>Read in {book.year}</p>}
                                 <p> {book.author.name}</p>
                                 <p> All books by this author</p>
                                 <ul className="other-books">

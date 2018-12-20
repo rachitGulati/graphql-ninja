@@ -15,17 +15,13 @@ export const getBooksQuery = gql`
         books{
             name
             id
-            author{
-                name
-            }
-
         }
     }
 `;
 
 export const addBookQuery = gql`
-    mutation($name: String!, $genre: String!, $authorId: ID!){
-        addBook(name: $name, genre: $genre, authorId: $authorId){
+    mutation($name: String!, $genre: String!, $authorId: ID!, $url: String, $year: ID){
+        addBook(name: $name, genre: $genre, authorId: $authorId, url: $url, year: $year){
             name
             id
         }
@@ -38,6 +34,8 @@ export const getBookQuery = gql`
             name
             id
             genre
+            url
+            year
             author{
                 id
                 name
