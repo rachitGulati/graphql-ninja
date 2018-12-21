@@ -84,7 +84,7 @@ form button{
   color: #fff;
 }
 
-#book-details img{
+/* #book-details img{
   float: right;
   top: 45px;
   position: absolute;
@@ -93,4 +93,72 @@ form button{
   height: 200px;
   box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
   border-radius: 3px;
+} */
+
+.book__thumb, .book__thumb img, .book__thumb::after,
+.book__thumb::before {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.book__thumb {
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  height: 220px;
+  position: relative;
+  background: #facea2;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow .3s linear;
+}
+
+.book__thumb img {
+  width: inherit;
+  height: inherit;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  transition: all .45s ease;
+}
+
+.book__thumb:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 9px 20px 0 rgba(0, 0, 0, 0.45);
+}
+.book__thumb:hover img {
+  -webkit-transform: rotateY(-25deg);
+          transform: rotateY(-25deg);
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book__thumb::after,
+.book__thumb::before {
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: #facea2;
+  border: 1px solid #d9d9d9;
+}
+
+.book__thumb::before {
+  left: -3px;
+}
+
+.book__thumb::after {
+  left: -6px;
+}
+
+.book__title{
+  font-size: 24px;
+}
+.book__details{
+  font-size: 20px;
+}
+.book__info{
+  text-decoration: underline;
 }

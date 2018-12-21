@@ -15,6 +15,7 @@ export const getBooksQuery = gql`
         books{
             name
             id
+            url
         }
     }
 `;
