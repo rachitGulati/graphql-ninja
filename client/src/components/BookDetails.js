@@ -32,6 +32,7 @@ const BookDetails = (props) => {
                     );
             }}
         </Query>
+        <div className="close-button isMobile" onClick={props.hideBooksDetails}></div>
         </div>
         )
 }

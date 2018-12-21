@@ -12,6 +12,12 @@ body {
   width: 60%;
   height: 100%;
 }
+@media only screen and (max-width: 600px) {
+  #main{
+    width: 100%;
+    height: 100%;
+  }
+}
 #book-list{
   padding: 0;
 }
@@ -29,6 +35,12 @@ body {
 #book-list li.active{
   border: 1px solid rgb(173, 20, 87);
   color: rgb(173, 20, 87);
+}
+@media only screen and (max-width: 600px) {
+  #book-list li.active{
+    border: 1px solid #879f48;
+    color: #879f48;
+  }
 }
 form{
   background: #fff;
@@ -83,7 +95,17 @@ form button{
   box-sizing: border-box;
   color: #fff;
 }
-
+.isMobile{
+  visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+  #book-details{
+    width: 100%;
+  }
+  .isMobile{
+    visibility: initial;
+  }
+}
 /* #book-details img{
   float: right;
   top: 45px;
@@ -161,4 +183,37 @@ form button{
 }
 .book__info{
   text-decoration: underline;
+}
+
+.close-button {
+  height: 50px;
+  width: 30px;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 50px;
+  display: inline-block;
+}
+.close-button:before,
+.close-button:after {
+  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -25px;
+  display: block;
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  transition: all 0.2s ease-out;
+}
+.close-button:after {
+  transform: rotate(45deg);
+}
+.close-button:hover:before,
+.close-button:hover:after {
+  transform: rotate(0deg);
 }

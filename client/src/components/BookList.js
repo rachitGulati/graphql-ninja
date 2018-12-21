@@ -17,6 +17,7 @@ function cacheBooksImages(books){
 }
 const BookList = () => {
     const [currentBook, setCurrentBook] = useState(null);
+    const [showBookDetails, setShowBookDetails] = useState(false);
     return (
       <div className="main">
       <Query query={getBooksQuery}>
@@ -31,14 +32,14 @@ const BookList = () => {
                             return <li 
                             key={book.id}
                             className={(currentBook === book.id ? 'active': '')}
-                            onClick={ () => { setCurrentBook(book.id)}}
+                            onClick={ () => { setCurrentBook(book.id); setShowBookDetails(true);}}
                             > 
                                 {book.name}
                             </li>
                         })
                         }
                     </ul>
-                    <BookDetails bookId={currentBook} />
+                    { showBookDetails && <BookDetails bookId={currentBook} hideBooksDetails = {()=> {setShowBookDetails(false);}}/> }
                 </>
                 );
             }
