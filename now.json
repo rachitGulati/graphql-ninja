@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "alias": "graphql-ninja",
+    "alias": "my-booklist.now.sh",
     "builds": [
       { "src": "index.js", "use": "@now/node" },
       { "src": "client/package.json", "use": "@now/static-build"}
