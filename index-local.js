@@ -13,7 +13,7 @@ const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 
 app.use(cors());
-mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@ds131784.mlab.com:31784/graphql-ninja`);
+mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@ds137404.mlab.com:37404/testing-mybooklist`);
 mongoose.connection.once('open', ()=>{
     console.log('Connected to databse');
 })
