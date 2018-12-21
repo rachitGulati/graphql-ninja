@@ -3,6 +3,7 @@ import { Query } from 'react-apollo';
 import { getBooksQuery } from '../queries/query';
 import BookDetails from './BookDetails';
 import quicklink from 'quicklink';
+const screen = window.screen;
 
 function cacheBooksImages(books){
     if(books.length < 1 ) return;
@@ -17,7 +18,7 @@ function cacheBooksImages(books){
 }
 const BookList = () => {
     const [currentBook, setCurrentBook] = useState(null);
-    const [showBookDetails, setShowBookDetails] = useState(false);
+    const [showBookDetails, setShowBookDetails] = useState(screen.width <= 600 ? false: true);
     return (
       <div className="main">
       <Query query={getBooksQuery}>
